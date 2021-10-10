@@ -1,11 +1,11 @@
 "use strict";
 
-let testExpect = (actual, expected) => {
-  if (actual === expected) {
-    console.log(`Test Passed: ${actual} : ${expected}`);
-  } else {
-    console.log(`Test Failed: ${actual} : ${expected}`);
-  }
-};
+let newsApp = new NewsApp({
+  headline: 'Todays headline',
+  textBody: 'Text body',
+  image: 'image url'
+});
 
-let newsApp = new NewsApp();
+it('gets the headline text', () => {
+  expect(newsApp.getHeadline()).toEqual('Todays headline');
+})
