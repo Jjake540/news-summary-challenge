@@ -1,3 +1,5 @@
+'use strict';
+
 let it = (label, testCallback) => {
   console.log(`Test: ${label}`)
   testCallback()
@@ -27,7 +29,6 @@ const expect = (actual) => {
       }
     },
     toContain: (contained) => {
-      //const result = actual.includes(contained)
       let result = false
       for (let i = 0; i < actual.length; i++) {
         if (actual[i] === contained) {
